@@ -10,17 +10,19 @@ const Result = ({ shortlistedNames }) => {
   const [winner, setWinner] = useState("");
   const [totalVotes,setTotalVotes] = useState(0);
  // const [started,setStarted] = useState(false);
- const rehandleWinners = async   ()=>{
-  const votingEnded = await isVotingEnd();
-  alert("voting still open : "+ votingEnded)
+//  const rehandleWinners = async   ()=>{
+//   const votingEnded = await isVotingEnd();
+//   alert("voting still open : "+ votingEnded)
 
-  if (votingEnded){
-   const nada =  await getTotalAndWinner()
-   setWinner(nada.winner)
-   setTotalVotes(nada.totalVotes)
-   console.log(nada);
-  }
-}
+//   if (votingEnded){
+//    const nada =  await getTotalAndWinner()
+//    setWinner(nada.winner)
+//    setTotalVotes(nada.totalVotes)
+//    console.log(nada);
+//   }
+// }
+
+
  useEffect(()=>{
  async function handleWinners (){
   const votingEnded = await isVotingEnd();
@@ -60,8 +62,8 @@ const Result = ({ shortlistedNames }) => {
       <table className={Style.table}>
       <thead>
         <tr>
-          <th>contestants</th>
-          <th>Number Of Votes</th>
+          <th>CONTESTANTS</th>
+          <th>NUMBER OF VOTES</th>
         </tr>
       </thead>
       <tbody>
@@ -74,9 +76,9 @@ const Result = ({ shortlistedNames }) => {
       </tbody>
     </table>
     <div className={Style.winnerSection}>
-      <Button btnName={"Display Winners"} handleClick = {()=>{rehandleWinners()}}/>
-      <div> {winner && totalVotes && (
-       <p> winner of election is : {winner} and totalNumber of Votes is {totalVotes}</p>
+      {/* <Button btnName={"Display Winners"} handleClick = {()=>{rehandleWinners()}}/> */}
+      <div className={Style.finalResult}> {winner && totalVotes && (
+       <p> {winner} won the election, with {totalVotes} votes</p>
       )}</div>
     </div>
     </div>

@@ -1,17 +1,13 @@
 .main {
-    height: 51.5vh;
+    height: 62.5vh;
     margin: 32px auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border: 1px solid yellow;
 }
 
 .shortList {
     width: 70%;
-    border: 1px solid red;
-    
-
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -25,24 +21,22 @@
 .note {
 
     text-align: center;
-    
     color: rgb(102, 99, 99);
     
 }
 
 .note span {
     padding: 5px;
-    background-color: lightcoral;
+    background-color: rgb(88, 86, 86);
+    color: rgb(253, 245, 230);
 
 }
 
 .details {
-    border: 1px solid black;
     width: 60%;
     margin: 32px auto 0 ;
-    padding: 1rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -56,8 +50,8 @@
     outline: none;
 }
 
+
 .time {
-    border: 1px solid green;
     width: 60%;
     margin: 32px auto;
     display: flex;
@@ -79,20 +73,14 @@
 
 
 .button {
-    
     display: flex;
     justify-content: center;
 }
 
 
 .review {
-    border: 1px solid blue;
-    
-    /* width: 60%; */
-    /* height: 60vh; */
-    /* margin: 32px auto 0 ; */
-    padding: 1rem;
-    display: flex;
+    padding: 2rem;
+    display: flex-start;
     justify-content: space-around;
     flex-direction: column;
 }
@@ -100,6 +88,10 @@
 .review h3 {
     color: grey;
     text-align: center;
+}
+
+.reviewItemlist {
+    padding: 2rem;
 }
 
 .note {
@@ -111,9 +103,13 @@
 }
 
 .note span {
-    /* padding: 5px; */
-    background-color: lightcoral;
 
+    background-color: rgb(88, 86, 86);
+
+}
+
+.dnt {
+    padding: 1rem;
 }
 
 .reviewButtons {
@@ -122,9 +118,3 @@
     
 }
 
-.errorMsg {
-    margin: 0 auto;
-    width: 60%;
-    /* padding-left: 12rem; */
-    /* background-color: gray; */
-}

@@ -1,17 +1,12 @@
 .registerVoter {
-
-    border: 1px solid red;
-    height: 51.5vh;
+    height: 62.5vh;
     margin: 32px auto;
     display: flex;
     justify-content: space-around;
-    
-
 }
 
 .registerfield {
     width: 50%;
-    border: 1px solid yellow;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,7 +18,8 @@
 
 .registeredVoter {
     width: 50%;
-    border: 1px solid black;
+    padding: 2rem;
+    border-left: 1px solid black;
     
 }
 
@@ -31,4 +27,16 @@
     color: rgb(138, 132, 132);
     padding: 1rem;
     text-align: center;
+}
+
+.address {
+    text-align: center;
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 500;
+    color: gray;;
+}
+
+.status {
+    padding-left: 32px;
 }

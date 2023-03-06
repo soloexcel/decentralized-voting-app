@@ -10,10 +10,10 @@ const CandidateTable = ({ shortlistedNames }) => {
   const { castVote } = useContext(ElectionContext)
   return (
     <table className={Style.table}>
-      <thead>
+      <thead className={Style.thead}>
         <tr>
-          <th>Shortlisted Names</th>
-          <th>Vote</th>
+          <th>CONTESTANTS</th>
+          <th>VOTE</th>
         </tr>
       </thead>
       <tbody>
@@ -22,7 +22,7 @@ const CandidateTable = ({ shortlistedNames }) => {
             <td className={Style.tableData}>{name}</td>
             <td className={Style.tableData}><Button btnName='Vote' handleClick={() => {
                castVote(index)
-               alert("If you didnt get an error message to try again move along the result page to see result")
+               alert("if no glitches, continue to the result page.")
                }}/></td>
           </tr>
         ))}

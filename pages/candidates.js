@@ -125,8 +125,6 @@ const isValidEndTime = (endTime) => {
               <input className={Style.input} type="text" placeholder="Short List a Candidate" onChange={onChangeHandler} value={shortlistname} />
               <Button btnName="ShortList" handleClick={shortlistHandler} />
             </div>
-  
-            <p className={Style.msg}> </p>
           </div>
   
           <div className={Style.time}>
@@ -145,9 +143,9 @@ const isValidEndTime = (endTime) => {
   
             <Button className={Style.button} btnName="Ok" handleClick={dateTimeHandler} />  
           </div>
-          <p className={Style.errorMsg}>
+          {/* <p className={Style.errorMsg}> */}
 
-          </p>
+          {/* </p> */}
           </div>
   
           {/* <div className={Style.button}>

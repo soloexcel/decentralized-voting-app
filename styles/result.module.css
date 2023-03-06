@@ -1,5 +1,5 @@
 .result {
-  height: 51.5vh;
+  height: 62.5vh;
   margin: 32px auto;
 }
 
@@ -15,4 +15,15 @@
 }
 
 .table tr:nth-child(even){background-color: #f2f2f2;}
+
+.winnerSection {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.finalResult {
+  padding: 3rem;
+  margin: 0 auto;
+}
 

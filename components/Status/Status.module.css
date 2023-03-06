@@ -1,12 +1,10 @@
 .status {
     width: 20%;
-    height: 8rem;
-    margin-top: 2rem;
+    height: 3.8rem;
+    margin: 2rem 0 0 2.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    
     padding: 1.5rem;
 }
 

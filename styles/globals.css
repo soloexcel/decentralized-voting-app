@@ -1,11 +1,10 @@
 :root{
 
-  --button-color: #2d87bd;
-  --card-color-gradient1: #3488c8;
-  --card-color-gradient2: #28618d;
-  --light-shadow: #a5cbe7;
+  --button-color: rgb(88, 86, 86);
+  --button-color-hover: rgb(148, 138, 138);
+  /* --light-shadow: #a5cbe7;
   --dark-shadow: #607d94;
-  --box-shadow: .2rem .2rem .5rem var(--light-shadow), -.2rem -.2rem .5rem var(--dark-shadow);
+  --box-shadow: .2rem .2rem .5rem var(--light-shadow), -.2rem -.2rem .5rem var(--dark-shadow); */
   
 
 

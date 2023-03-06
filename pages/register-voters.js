@@ -37,9 +37,9 @@ const registerVoters = () => {
      
   },[])
     // get the input 
-    const onChangeHandler = (e) => {
-        setVoterAddr(e.target.value)
-    }
+    // const onChangeHandler = (e) => {
+    //     setVoterAddr(e.target.value)
+    // }
 
   return (
     <div className={Style.registerVoter}> 
@@ -54,14 +54,17 @@ const registerVoters = () => {
         </div>
 
 <div className={Style.registeredVoter}>
-  <h3>List of registered voters and their Informations</h3>
+  <h3>List of registered voters and their Status</h3>
 {actualVoters && actualVoters.length > 0 && (
   <>
     {actualVoters.map((voter) => (
-      <div key={voter.voteraddress}>
-        <p>Voter Address: {voter.voteraddress}</p>
-        <p>Has Voted: {voter.hasVoted ? "Yes" : "No"}</p>
-        <p>Voted For: Candidate Number -  {voter.votedFor}</p>
+      <div key={voter.voteraddress} >
+        <p className={Style.address}>
+          {`${voter.voteraddress.substring(0, 7)}...${voter.voteraddress.substring(35, 42)}`}
+          <span className={Style.status}>{voter.hasVoted ? "Voted" : "Yet to Vote"}</span>
+        </p>
+          
+        {/* <p>Voted For: Candidate Number -  {voter.votedFor}</p> */}
       </div>
     ))}
   </>

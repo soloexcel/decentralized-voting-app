@@ -23,14 +23,10 @@ const CastVote = () => {
     useEffect(()=>{
       console.log(candidates)
     },[setCandidates])
-    const start = new Date('2023-03-02T10:00:00');
-    const end = new Date('2023-03-02T12:30:04');
-
-    const startISOString = start.toISOString();
-    const endISOString = end.toISOString();
+    
   return (
     <div className={Style.castVote}>
-        <CalculateVoteTime startTime={startISOString} endTime={endISOString}/>
+        {/* <CalculateVoteTime startTime={startISOString} endTime={endISOString}/> */}
        {candidates && ( <CandidateTable shortlistedNames={candidates} />)}
     </div>
   )

@@ -13,8 +13,15 @@ async function main() {
 
 	// save the contract address to a local file.
 	fs.writeFileSync('./context/config.js', 
-  `export const contractAddress = "${election.address}"
-  export const ownerAddress = "${election.signer.address}"`) 
+  `
+  import election from "./Election.json"
+
+  export const contractAddress = "${election.address}";
+  export const ownerAddress = "${election.signer.address}";
+  export const electionABI = election.abi;
+  `) 
+
+  console.log("Open the ./context/config.js file to find the deployment details.")
 
 }
 

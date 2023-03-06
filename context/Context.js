@@ -106,12 +106,12 @@ console.log(endTimeStamp);
   console.log("transaction succesful")
   }catch(error){
     console.log(error);
-    const errorString = error.data.message;
-    const reason = errorString.replace(
-      /[^a-zA-Z0-9 ]/g,
-      ""
-    );
-    alert(`${reason}`);
+    // const errorString = error.data.message;
+    // const reason = errorString.replace(
+    //   /[^a-zA-Z0-9 ]/g,
+    //   ""
+    // );
+    alert(`${error.message}`);
   }
 }else{
   alert("Sorry Starttime cant be in the past pick a time higher than current time")
@@ -148,12 +148,12 @@ const registerVoter = async() => {
     else{
       alert("please connect wallet");
     }} catch(error){
-      console.log(error);
-      const errorString = error.data.message;
-      const reason = errorString.replace(
-        /[^a-zA-Z0-9 ]/g,
-        ""
-      );
+      console.log(error.message);
+      // const errorString = error.data.message;
+      // const reason = errorString.replace(
+      //   /[^a-zA-Z0-9 ]/g,
+      //   ""
+      // );
       alert(`registration unsucessful : ${reason} please come back to this page to try again`);
     }
 }

@@ -1,5 +1,8 @@
 
 // SPDX-License-Identifier: MIT
+// Author: Olalekan Solomon Awoyemi
+// Description: This is a smart contract for conducting an election where candidates can be added and voters can register and cast their votes. It also includes a function to determine the winning candidate.
+
 pragma solidity ^0.8.0;
 
 contract Election {
