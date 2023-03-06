@@ -1,0 +1,130 @@
+.main {
+    height: 51.5vh;
+    margin: 32px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid yellow;
+}
+
+.shortList {
+    width: 70%;
+    border: 1px solid red;
+    
+
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.shortList h1 {
+    color: grey;
+    text-align: center;
+}
+
+.note {
+
+    text-align: center;
+    
+    color: rgb(102, 99, 99);
+    
+}
+
+.note span {
+    padding: 5px;
+    background-color: lightcoral;
+
+}
+
+.details {
+    border: 1px solid black;
+    width: 60%;
+    margin: 32px auto 0 ;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.details .input {
+    width: 60%;
+    padding: 1.2rem;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid gray;
+    outline: none;
+}
+
+.time {
+    border: 1px solid green;
+    width: 60%;
+    margin: 32px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.time .dnt {
+    /* width: 50%;  */
+    padding: 1.2rem;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid gray;
+    outline: none;
+}
+
+
+.button {
+    
+    display: flex;
+    justify-content: center;
+}
+
+
+.review {
+    border: 1px solid blue;
+    
+    /* width: 60%; */
+    /* height: 60vh; */
+    /* margin: 32px auto 0 ; */
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.review h3 {
+    color: grey;
+    text-align: center;
+}
+
+.note {
+
+    text-align: center;
+    
+    color: rgb(102, 99, 99);
+    
+}
+
+.note span {
+    /* padding: 5px; */
+    background-color: lightcoral;
+
+}
+
+.reviewButtons {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.errorMsg {
+    margin: 0 auto;
+    width: 60%;
+    /* padding-left: 12rem; */
+    /* background-color: gray; */
+}

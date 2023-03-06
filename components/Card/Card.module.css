@@ -1,0 +1,91 @@
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 70%;
+    height: 82vh;
+    margin: auto;
+    border: 1px solid grey;
+
+    background-image: linear-gradient(to right top, var(--card-color-gradient1), var(--card-color-gradient2));;
+    
+}
+
+/* .card p {
+    position: relative;
+    left: 5rem;
+    top: 5rem;
+    /* bottom: 5rem; 
+} */
+
+.card1 {
+    border: 1px solid red;
+    flex: 1;
+    height: 80%;
+    position: relative;
+    left: 2rem;
+
+    background-image: linear-gradient(to right top, var(--card-color-gradient1), var(--card-color-gradient2));;
+
+}
+
+.card1 .ballotbox {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card2 {
+    border: 1px solid black;
+    border-radius: 10px;
+    flex: 1.5;
+    height: 100%;
+    padding: 8rem 20px;
+    text-align: center;
+}
+
+.card2 h1 { 
+    white-space: nowrap;
+}
+.card2 p {
+    padding: 20px;
+    line-height: 2;
+}
+
+.arrow {
+font-size: 60px;
+
+color: red;
+animation: blink-and-vibrate 2s infinite;
+} 
+
+@keyframes blink-and-vibrate {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      transform: translate(2px, 2px);
+      opacity: 1;
+    }
+  }
+
+
+.card3 {
+    border: 1px solid green;
+    flex: 1;
+    height: 80%;
+    position: relative;
+    right: 2rem;
+}
+
+.card3 .fingerprint {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+}
+

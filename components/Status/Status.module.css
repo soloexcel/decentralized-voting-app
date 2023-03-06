@@ -1,0 +1,26 @@
+.status {
+    width: 20%;
+    height: 8rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+    padding: 1.5rem;
+}
+
+.userIcon {
+    font-size: 2rem;
+    color: gray;
+}
+
+.status p {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.status p span {
+
+    font-size: 12px;
+}
