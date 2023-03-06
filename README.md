@@ -23,62 +23,60 @@ State Variables:
 
 The smart contract has several state variables:
 
-listingPrice: A variable that stores the cost of listing candidates. This is set to 0.0000025 ether.
+`admin`: A variable that stores the address of the contract administrator. This is set to the address of the person who deploys the contract.
 
-admin: A variable that stores the address of the contract administrator. This is set to the address of the person who deploys the contract.
+`voters`: A mapping that stores the details of each voter. The key is the voter's address, and the value is a struct of the Voter type, which contains information about whether the voter is registered, has voted, and the index of the candidate they voted for.
 
-voters: A mapping that stores the details of each voter. The key is the voter's address, and the value is a struct of the Voter type, which contains information about whether the voter is registered, has voted, and the index of the candidate they voted for.
+`candidates`: An array of the Candidate type that stores the details of each candidate. The struct contains the name of the candidate and the number of votes they have received.
 
-candidates: An array of the Candidate type that stores the details of each candidate. The struct contains the name of the candidate and the number of votes they have received.
+`votingStart`: A variable that stores the timestamp of when voting begins.
 
-votingStart: A variable that stores the timestamp of when voting begins.
+`votingEnd`: A variable that stores the timestamp of when voting ends.
 
-votingEnd: A variable that stores the timestamp of when voting ends.
+`minimumVotes`: A variable that stores the minimum number of votes required for the election to be valid.
 
-minimumVotes: A variable that stores the minimum number of votes required for the election to be valid.
+`isVotingOpen`: A boolean variable that indicates whether voting is currently open or closed.
 
-isVotingOpen: A boolean variable that indicates whether voting is currently open or closed.
+`contestantsAdded`: A boolean variable that indicates whether contestants have been added.
 
-contestantsAdded: A boolean variable that indicates whether contestants have been added.
+`totalVotes`: A variable that stores the total number of votes cast.
 
-totalVotes: A variable that stores the total number of votes cast.
+`registeredVoters`: An array that stores the addresses of registered voters.
 
-registeredVoters: An array that stores the addresses of registered voters.
+`timestamp`: A variable that stores the current timestamp.
 
-timestamp: A variable that stores the current timestamp.
+#### Structs:
 
-Structs:
+### The smart contract has two structs:
 
-The smart contract has two structs:
+`Voter`: A struct that stores information about a voter. It contains a boolean value indicating whether the voter is registered, another boolean value indicating whether the voter has voted, and a uint256 value indicating the index of the candidate the voter voted for.
 
-Voter: A struct that stores information about a voter. It contains a boolean value indicating whether the voter is registered, another boolean value indicating whether the voter has voted, and a uint256 value indicating the index of the candidate the voter voted for.
-
-Candidate: A struct that stores information about a candidate. It contains a string value indicating the candidate's name and a uint256 value indicating the number of votes the candidate has received.
+`Candidate`: A struct that stores information about a candidate. It contains a string value indicating the candidate's name and a uint256 value indicating the number of votes the candidate has received.
 
 
-Functions:
+### Functions:
 
 The smart contract has functions that perform different actions. These functions include:
 
-The ==contestants== function allows the administrator to add candidate names, voting start and end times, and the minimum number of votes required for a valid election. It checks if contestants have already been added, if there are at least one candidate, and if the voting end time is greater than the voting start time.
+The `contestants` function allows the administrator to add candidate names, voting start and end times, and the minimum number of votes required for a valid election. It checks if contestants have already been added, if there are at least one candidate, and if the voting end time is greater than the voting start time.
 
-The ==registerVoter== function allows voters to register and checks if voting is still open and the voter has not already registered.
+The `registerVoter` function allows voters to register and checks if voting is still open and the voter has not already registered.
 
-The ==castVote== function allows voters to cast their vote for a candidate and checks if voting is still open, the voter has registered, has not voted before, and the candidate index is valid.
+The `castVote` function allows voters to cast their vote for a candidate and checks if voting is still open, the voter has registered, has not voted before, and the candidate index is valid.
 
-The ==endVoting== function allows the administrator to end the voting period and check if the voting end time has elapsed and the minimum number of votes have been cast.
+The `endVoting` function allows the administrator to end the voting period and check if the voting end time has elapsed and the minimum number of votes have been cast.
 
-The ==getCandidate== function allows anyone to get the name and vote count of a candidate by providing their index. It checks if the candidate index is valid.
+The `getCandidate` function allows anyone to get the name and vote count of a candidate by providing their index. It checks if the candidate index is valid.
 
-The ==getVoterHasVoted== function allows anyone to check if a specific voter has already cast their vote by providing the voter's address.
+The `getVoterHasVoted` function allows anyone to check if a specific voter has already cast their vote by providing the voter's address.
 
-The ==getVotedFor== function allows anyone to check which candidate a specific voter has voted for by providing the voter's address.
+The function allows anyone to check which candidate a specific voter has voted for by providing the voter's address.
 
-The ==getRegisteredVoters== function allows anyone to get a list of registered voters.
+The `getRegisteredVoters` function allows anyone to get a list of registered voters.
 
-The ==getTotalVotes== function allows anyone to get the total number of votes cast in the election.
+The `getTotalVotes` function allows anyone to get the total number of votes cast in the election.
 
-The getWinner function allows anyone to get the name of the candidate with the highest number of votes. It checks if the voting period has ended and returns the name of the candidate with the highest vote count.
+The `getWinner` function allows anyone to get the name of the candidate with the highest number of votes. It checks if the voting period has ended and returns the name of the candidate with the highest vote count.
 
 
 
